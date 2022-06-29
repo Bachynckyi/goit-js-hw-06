@@ -1,6 +1,6 @@
 
 
-const arrayButtons = {
+const refs = {
     incrementButton: document.querySelector('[data-action="increment"]'),
     decrementButton: document.querySelector('[data-action="decrement"]'),
     counterValue: document.querySelector('#value')
@@ -8,12 +8,12 @@ const arrayButtons = {
 
 let value = 0;
 
-arrayButtons.decrementButton.addEventListener('click', () => {
+refs.decrementButton.addEventListener('click', () => {
     makeDecrement();
     updateValue();
 });
 
-arrayButtons.incrementButton.addEventListener('click', () => {
+refs.incrementButton.addEventListener('click', () => {
     makeIncrement();
     updateValue();
 })
@@ -27,5 +27,5 @@ function makeIncrement() {
 }
 
 function updateValue() {
-  arrayButtons.counterValue.textContent = value;
+  refs.counterValue.textContent = value;
 }
