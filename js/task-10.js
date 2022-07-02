@@ -30,8 +30,6 @@ function createBoxes(amount) {
   }
   refs.boxes.insertAdjacentHTML("afterbegin", boxesArray.join(""));
 }
-
-
 function destroyBoxes() {
   boxes.innerHTML = null;
   refs.input.value = null;
