@@ -13,4 +13,4 @@ function onInput(event) {
     else {
         refs.labelArea.textContent = event.currentTarget.value;
     };
-}s
+}
