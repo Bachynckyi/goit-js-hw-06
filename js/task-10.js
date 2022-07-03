@@ -24,15 +24,21 @@ function createBoxes(amount) {
   let boxesArray = [];
   for (let i = 1; i <= amount; i += 1) {
     const newArray = `<div style='width: ${startWidth}px; height: ${startHeight}px; background-color: ${getRandomHexColor()}';></div>`
-      boxesArray.push(newArray);
+    boxesArray.push(newArray);
     startHeight += 10;
     startWidth += 10;
   }
-  refs.boxes.insertAdjacentHTML("afterbegin", boxesArray.join(""));
+  refs.boxes.insertAdjacentHTML("beforeend", boxesArray.join(""));
+  
+    startWidth = 30;
+    startHeight = 30;
 }
+
+
 function destroyBoxes() {
   boxes.innerHTML = null;
   refs.input.value = null;
   startWidth = 30;
   startHeight = 30;
 }
+
